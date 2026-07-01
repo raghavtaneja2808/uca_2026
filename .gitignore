@@ -2,6 +2,9 @@
 # Prerequisites
 *.d
 
+#class file of java
+*.class
+
 # Object files
 *.o
 *.ko
