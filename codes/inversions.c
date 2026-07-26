@@ -53,7 +53,7 @@ void solver(int nums[], int l, int m, int r) {
         nums[i++] = temp[k++];
 }
 
-int reversePairs(int nums[], int numsSize) {
+int inversions(int nums[], int numsSize) {
     temp = (int *)malloc(sizeof(int) * numsSize);
 
     count = 0;
@@ -74,7 +74,7 @@ int main() {
     for (int i = 0; i < n; i++)
         scanf("%d", &arr[i]);
 
-    printf("%d\n", reversePairs(arr, n));
+    printf("%d\n", inversions(arr, n));
 
     return 0;
 }
