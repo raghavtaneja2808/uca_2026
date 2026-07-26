@@ -27,7 +27,7 @@ void solver(int nums[], int l, int m, int r) {
     int i = l;
 
     while (i <= m && j <= r) {
-        if (temp[i] / 2.0 > temp[j]) {
+        if (temp[i] > temp[j]) {
             count += m - i + 1;
             j++;
         } else {
