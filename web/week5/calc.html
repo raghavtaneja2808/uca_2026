@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function* calculator() {
+            let n = yield;
+            while (true) {
+                const obj = yield;
+                const symb = obj.operation;
+                const value = obj.value;
+                if (symb == 'add') n += value;
+                else if (symb == 'subtract') n -= value;
+                else if (symb == 'divide') n /= value;
+                else if (symb == 'multiply') n *= value;
+                else continue;
+                console.log(n);
+            }
+        }
+        const calc = calculator();
+
+calc.next();     // Start the generator
+calc.next(50);   // Set initial value
+calc.next({ operation: "add", value: 30 });
+calc.next({ operation: "multiply", value: 2 });
+    </script>
+
+</body>
+
+</html>

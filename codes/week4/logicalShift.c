@@ -9,7 +9,7 @@ int main(){
     // printf("Enter the number: ");
     // scanf("%d",&x);
     // printf("How much shift : ");
-    // scanf("%d",&n);
+    // scanf("%d",&n); 
     // printf("Right shifted logical value is : %d\n",logicalShift(x,n));
     printf("0x%08X\n", logicalShift(0x87654321,4) );
 }
